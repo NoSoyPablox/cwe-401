@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+#define LOOPS 100
+#define MAXSIZE 256
+
+int main(int argc, char **argv)
+{
+    int count = 0;
+    char *pointer = NULL;
+
+    for(count = 0; count < LOOPS; count++)
+    {
+        pointer = (char *)malloc(sizeof(char) * MAXSIZE);
+        free(pointer); //Arreglado ya liberando el espacio enseguida de la asignacion
+    }
+    
+
+    return count;
+}
